@@ -61,5 +61,7 @@ function onFormSubmit(e) {
   e.preventDefault();
   e.currentTarget.reset();
   removeKeyFromLocal(KEY_DATA);
+  storage.email = '';
+  storage.message = '';
   console.log(storage);
 }
