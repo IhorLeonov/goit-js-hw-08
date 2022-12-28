@@ -7,7 +7,9 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const galleryBox = document.querySelector('.gallery');
 const imagesMarkup = createGalleryMarkup(galleryItems);
 galleryBox.insertAdjacentHTML('beforeend', imagesMarkup);
-galleryBox.addEventListener('click', onImageClick);
+
+let gallery = new SimpleLightbox('.gallery a');
+gallery.on('show.simplelightbox', onImageClick);
 
 function createGalleryMarkup(galleryItems) {
   return galleryItems

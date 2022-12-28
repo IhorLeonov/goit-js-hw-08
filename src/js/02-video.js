@@ -20,7 +20,7 @@ const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 const KEY_TIME = 'videoplayer-current-time';
 
-player.on('play', setCurrentPlaybackTime);
+setCurrentPlaybackTime();
 player.on('timeupdate', throttle(setTimeToLocal, 1000));
 
 function setTimeToLocal(e) {
